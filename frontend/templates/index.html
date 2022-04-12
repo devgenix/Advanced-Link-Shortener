@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Mlsc.live | {% endblock title %}
+
+{% block content %}
+
+{% load static %}
+
+    <div class="container-fluid row home">
+        <section class="top-header col-md-5 col-sm-12 ">
+
+            <div class="container-fluid ">
+                <div class="row align-items-center">
+                    <div>
+                        <div class="form-group">
+
+                            <h1 style="text-align: center; color: #6C55F9;"><b>Mlsc.live</b></h1>
+                            <h2 style="text-align: center; color: white;">Shorter links + unique names</h2>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Form -->
+        <section id="newsletter" class="newsletter col-md-7 col-sm-12 ">
+
+            <div class="container-fluid ">
+                <div class="row align-items-center">
+                    <div class="form-holder">
+                        <form class="newsletterForm">
+
+                            <div class="form-group">
+
+                                {% comment %} <h1 style="text-align: center; color: #6C55F9;">Mlsc.live</h1> {% endcomment %}
+                                <h5 style="text-align: center; color: #6C55F9;">Shorten your links with unique names to build your brand’s recognition for free</h5>
+                                <hr>
+
+                                <input type="text" name="email" id="email" placeholder="Original link (https://google.com/search?=what+is+a+link+shortener)">
+                                <div class="error_isActiveText" style="display: none;"></div>
+                                
+                                <input id="alias" class="alias" type="text" name="name" placeholder="Optional unique name (https://frda.me/unique-name)">
+                                <div class="url_error_isActiveText" style="display: none;"></div>
+                                
+                                <button id="submitButton" class="btn btn-primary submitbutton submit">Shorten</button>
+                                
+                                <div class="server_error_isActiveText" style="display: none;">Server Internal error, please contact <a style="color:#2A2E32; font-weight: bold;" href="mailto:mlsc@unizik.tech">admin</a> and try again later</div>
+                                <div id="success_isActiveText" class="success_isActiveText" style="display: none;"><a class="copy-text" target="_BLANK" href="">hhhhhh</a><br><button class="btn btn-dark copy-button" >Copy</button></div>
+
+
+                                </div>
+
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="footer col-12">
+            <div class="col-md-12 text-white" style="text-align: center; font-size: 12px;">
+                <p>Built by <a href="https://github.com/devgenix"> Devgenix </a> </p>
+            </div>
+        </section>
+    </div>
+
+{% endblock content %}
